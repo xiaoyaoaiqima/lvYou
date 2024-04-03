@@ -1,6 +1,6 @@
 var chartDom = document.getElementById('rank1');
 var myChart = echarts.init(chartDom);
-var option;
+let option;
 
 option = {
   polar: {
@@ -21,7 +21,11 @@ option = {
       '镇远古城',
       '黄果树瀑布',
       '荔波小七孔'
-    ]
+    ],
+    axisTick:{
+      interval: 1,
+      show: false
+    }
   },
   tooltip: {},
   series: {
@@ -41,7 +45,7 @@ option = {
       show: true,
       position: 'middle',
       formatter: '{b}: {c}'
-    }
+    },
   }
 };
 

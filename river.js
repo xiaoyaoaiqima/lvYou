@@ -4,7 +4,7 @@ var myChart = echarts.init(chartDom);
 var option = {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: 'Gradient Stacked Area Chart',
+    text: '评分累积河流图',
     top: 0
   },
   tooltip: {

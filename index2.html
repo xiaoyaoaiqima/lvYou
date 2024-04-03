@@ -4,68 +4,74 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>ECharts</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
 </head>
 <style>
-  body {
-    padding: 10px;
-    z-index: 99;
-  }
-  #particles-js {
-    z-index: 1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
+    body {
+        padding: 10px 50px;
+        z-index: 99;
+        //background-color: #a16a6a
+        //background: #fff url("./assets/bg.png") 0 0 no-repeat;
+        background: whitesmoke url("./assets/border.png") no-repeat;
+        background-size: 40vw 240vh;
+        background-position: center;
+
+    }
+
+    #particles-js {
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
 
 </style>
 <body>
-  <div id="particles-js">
-        <!-- 顶部 标题，时间，天气 -->
-  <div id="top" style="display: flex;height: 36px;">
-    <div id="timeBox" style="width: 10%;font-size: smaller"></div>
-    <div style="width: 80%;text-align: center;">
-      <h1 style="margin-top: 5px;margin-bottom: 25px;">
-        这里是标题
-      </h1>
-    </div>
-    <div style="width: auto;text-align: center;font-size: smaller">空气指数：良好</div>
-  </div>
-  <div style="display: flex;flex-direction: row;">
-    
-    <!-- 左边 -->
-    <div style="flex: 3;display: flex;flex-direction: column;width: 20%;">
-      <div id="text" style="text-indent: 2rem;font-size: 12px;">
-        <div>
-          贵州省位于中国西南地区，地处喀斯特地貌带，素有"中国的翡翠"之称，
-          拥有丰富的自然资源和人文景观，因此具有很高的旅游价值。
+<div id="particles-js">
+    <!-- 顶部 标题，时间，天气 -->
+    <div id="top" style="display: flex;height: 36px;">
+        <div id="timeBox" style="width: 10%;font-size: smaller"></div>
+        <div style="width: 80%;text-align: center;">
+            <h1 style="margin-top: 5px;margin-bottom: 25px; font-family: 'Microsoft YaHei', 'SimHei', sans-serif; color:darkslateblue ;text-shadow: 2px 2px 4px #000000;">
+                贵州省热门景区旅游数据可视化
+            </h1>
         </div>
-        <div>
-          本研究通过echarts 可视化工具分析贵州省旅游数据和热门景区的数据，旨在
-          通过数据信息整合将贵州省的旅游资源进行数字化呈现，提供给游客
-          更直观、全面的旅游息，既方便游客选择旅游路线、了解景点信息，
-          又促进贵州省旅游业的发展。
-        </div>
-      </div>
-      <div id="rank1" style="height:400px;"></div>
-      <div id="rank2" style="height:500px;"></div>
+        <div style="width: auto;text-align: center;font-size: smaller">空气指数：良好！ 祝您出行愉快</div>
     </div>
-    <!-- 中间 -->
-    <div style="flex: 5;display: flex;flex-direction: column;align-items: center;">
-      <div id="map2" style="width: 550px;height:400px;margin-top: 10px;"></div>
-      <div id="river" style="width: 550px;height:600px;margin-top: 40px;"></div>
-    </div>
-    <!-- 右边 -->
-    <div style="flex: 3;display: flex;flex-direction: column;">
-      <div id="sunbrust" style="height:500px;margin-bottom: 40px;width: 450px;"></div>
-      <div id="line" style="height:500px;"></div>
-    </div>
-  </div>
-  </div>
+    <div style="display: flex;flex-direction: row;">
 
+        <!-- 左边 -->
+        <div style="flex: 3;display: flex;flex-direction: column;width: 20%;">
+            <div id="text" style="text-indent: 2rem;font-size: 12px;">
+                <div>
+                    贵州省位于中国西南地区，地处喀斯特地貌带，素有"中国的翡翠"之称，
+                    拥有丰富的自然资源和人文景观，因此具有很高的旅游价值。
+                </div>
+                <div>
+                    本研究通过echarts 可视化工具分析贵州省旅游数据和热门景区的数据，旨在
+                    通过数据信息整合将贵州省的旅游资源进行数字化呈现，提供给游客
+                    更直观、全面的旅游息，既方便游客选择旅游路线、了解景点信息，
+                    又促进贵州省旅游业的发展。
+                </div>
+            </div>
+            <div id="rank1" style="height:500px;width: 500px"></div>
+            <div id="river" style="width: 550px;height:500px;"></div>
+        </div>
+        <!-- 中间 -->
+        <div style="flex: 5;display: flex;flex-direction: column;align-items: center;width: 600px;">
+            <div id="map2" style="width: 800px;height:600px;margin:10px 20px;"></div>
+            <div id="rank3" style="height:500px;width: 600px;"></div>
+        </div>
+        <!-- 右边 -->
+        <div style="flex: 3;display: flex;flex-direction: column;">
+            <div id="sunburst" style="height:600px;margin-bottom: 10px;width: 500px;"></div>
+            <div id="line" style="height:500px;width: 600px"></div>
+        </div>
+    </div>
+</div>
 
 
 </body>
@@ -73,11 +79,11 @@
 <script src="rank2.js" type="module"></script>
 <script src="map2.js" type="module"></script>
 <script src="timeBox.js" type="module"></script>
-<script src="sunbrust.js" type="module"></script>
+<script src="sunburst.js" type="module"></script>
 <script src="line.js" type="module"></script>
 <script src="river.js" type="module"></script>
 <script src="index.js" type="module"></script>
 <script src="./particle/particles.min.js"></script>
 <script src="./particle/script.js"></script>
-
+<script src="rank3.js" type="module"></script>
 </html>

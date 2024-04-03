@@ -1,7 +1,7 @@
-var chartDom = document.getElementById('sunbrust');
-var sunBrustChart = echarts.init(chartDom);
+var chartDom = document.getElementById('sunburst');
+var sunburstChart = echarts.init(chartDom);
 const colors = ['#FFAE57', '#FF7853', '#EA5151', '#CC3F57', '#9A2555'];
-var bgColor = '#2E2733';
+var bgColor = '#FFFFFF';
 const itemStyle = {
     star5: {
         color: colors[0]
@@ -388,7 +388,7 @@ for (let j = 0; j < data.length; ++j) {
     }
 }
 var option = {
-    backgroundColor: bgColor,
+    // backgroundColor: bgColor,
     color: colors,
     series: [
         {
@@ -459,4 +459,4 @@ var option = {
         }
     ]
 };
-sunBrustChart.setOption(option);
+sunburstChart.setOption(option);
