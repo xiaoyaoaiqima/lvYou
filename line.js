@@ -1,4 +1,4 @@
-var chartDom = document.getElementById('index');
+var chartDom = document.getElementById('line');
 var myChart = echarts.init(chartDom);
 
 
@@ -15,13 +15,15 @@ var seriesData = {
 // 初始化折线图配置
 var option = {
   title: {
-    text: 'Stacked Line Dynamic Growth'
+    text: 'Stacked Line Dynamic Growth',
+    top:-5
   },
   tooltip: {
     trigger: 'axis'
   },
   legend: {
-    data: Object.keys(seriesData)
+    data: Object.keys(seriesData),
+    top:20
   },
   grid: {
     left: '3%',
